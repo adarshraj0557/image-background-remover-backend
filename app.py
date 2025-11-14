@@ -53,8 +53,8 @@ async def lifespan(app: FastAPI):
     global model_session, redis_client
     # Preload lighter model session (u2net_human_seg for low mem)
     try:
-        model_session = new_session("u2net_human_seg")  # ~120MB vs 176MB for u2net
-        logger.info("Loaded u2net_human_seg model (~120MB)")
+        model_session = new_session("silueta")  # ~120MB vs 176MB for u2net
+        logger.info("Loaded silueta (~40MB)")
     except Exception as e:
         logger.error(f"Model preload failed: {e}. Falling back to default.")
         model_session = new_session()  # Default u2net if seg fails
