@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+rembg
+pillow
+onnxruntime
+python-multipart
+slowapi
+python-dotenv
+gunicorn
+redis
+mangum
